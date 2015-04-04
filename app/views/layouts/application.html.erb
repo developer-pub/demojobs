@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jobs</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="navigation-bar">
+		<a href='#'>Find a Job</a>
+		<a href='#'>Lose a Job</a>
+
+		<div class="clear"></div>
+	</div>
+	<div class="main-content">
+		<img src="/logo.png" alt="We use angularJS... do you?"/>
+		<%= yield %>
+	<div contenteditable>This is editable</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<div class="paging">
+	<%= 
+		result = ""
+
+		[@page_count, 7].min.times do |num| 
+			result << link_to(num + 1, search_path(num + 1, @query_params))
+		end
+
+		if @page_count > 7
+			result << content_tag('span', '...')
+			result << link_to(@page_count, search_path(@page_count, @query_params))
+		end
+
+		result.html_safe
+	%>
+</div>

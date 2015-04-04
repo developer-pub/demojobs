@@ -1,0 +1,16 @@
+<div class="search-box" style="">
+	<div class="search-box-heading">Search for Jobs</div>
+	<div class="search-box-body">
+		<%= form_tag search_path, method: :get do %>
+		<div class="form-label">Enter keywords</div>
+		<%# label_tag :category, 'Specify category' %>
+		<%= text_field_tag :category, nil, class: 'form-field' %>
+
+		<div class="form-label">Specify content</div>
+		<%# label_tag :body, 'Content' %>
+		<%= text_field_tag :body, nil, class: 'form-field' %>
+
+		<%= button_tag 'Search', style: "display: none", name: nil %>
+		<% end %>
+	</div>
+</div>

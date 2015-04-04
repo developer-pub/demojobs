@@ -1,0 +1,21 @@
+<div class="search-page">
+	<div ng-app="app" ng-controller="AlaController">
+		<%= text_field_tag :body, nil, class: 'form-field', :'ng-model' => 'searchText', :'ng-trim' => 'false' %>
+		<div>Text in scope: {{searchText}}</div>
+		<div class="results">
+			<h1>Dynamic Job Search Results</h1>
+			<p>Below are your search results for jobs that include the keywords: "{{searchText}}".</p>
+			<h2>Job Search Results [{{results.start_index}} to {{results.end_index}}] of [{{results.offers_count}}]</h2>
+
+			<div class="list">
+				<div ng-repeat="offer in results.offers" class="element">
+					<div class="title">{{offer.title}}</div>
+					<div class="body">{{offer.body}}</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<%= render 'search_box' %>
+	<div class="clear">
+</div>
