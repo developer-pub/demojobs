@@ -1,6 +1,6 @@
 ap = angular.module('app', [])
 
-ap.controller('AlaController', function($scope, $http){
+ap.controller('AlaController', ['$scope', '$http', function($scope, $http){
 	$scope.searchText = '';
 
 	$scope.$watch('searchText', function(newValue, oldValue){
@@ -8,4 +8,4 @@ ap.controller('AlaController', function($scope, $http){
 			$scope.results = results;
 		});
 	});
-});
+}]);

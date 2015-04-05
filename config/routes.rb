@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  #devise_for :users
   root 'main#index'
   #get 'search' => 'search#search', as: 'search'
   match 'search(/:page_number)' => 'search#search', via: [:get, :post], as: 'search'
