@@ -48,8 +48,12 @@ gem 'capybara'
 
 gem 'devise'
 
-gem 'pg', group: :production
+gem 'pg'
 gem 'rails_12factor', group: :production
+
+gem 'taps'
+
+gem 'seed_dump'
 
 
 
