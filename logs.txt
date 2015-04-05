@@ -1,0 +1,102 @@
+2015-04-05T15:39:34.222876+00:00 app[web.1]:   Rendered search/_paging.html.erb (0.1ms)
+2015-04-05T15:39:34.223684+00:00 app[web.1]:   Rendered search/_search_box.html.erb (0.6ms)
+2015-04-05T15:39:34.223757+00:00 app[web.1]:   Rendered search/search.html.erb within layouts/application (3.5ms)
+2015-04-05T15:39:34.224900+00:00 app[web.1]: Completed 200 OK in 9ms (Views: 3.7ms | ActiveRecord: 2.5ms)
+2015-04-05T15:39:36.230703+00:00 heroku[router]: at=info method=GET path="/search?utf8=%E2%9C%93&category=&body=this" host=dry-journey-2619.herokuapp.com request_id=d21074e9-1ba5-4bf9-82ae-097fc583ab32 fwd="188.121.15.125" dyno=web.1 connect=2ms service=18ms status=200 bytes=3588
+2015-04-05T15:39:36.216469+00:00 app[web.1]: Started GET "/search?utf8=%E2%9C%93&category=&body=this" for 188.121.15.125 at 2015-04-05 15:39:36 +0000
+2015-04-05T15:39:36.224747+00:00 app[web.1]:   [1m[36mOffer Load (1.3ms)[0m  [1mSELECT  "offers".* FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%this%') LIMIT 10 OFFSET 0[0m
+2015-04-05T15:39:36.218442+00:00 app[web.1]: Processing by SearchController#search as HTML
+2015-04-05T15:39:36.222094+00:00 app[web.1]:   [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%this%')
+2015-04-05T15:39:36.226344+00:00 app[web.1]:   Rendered search/_paging.html.erb (0.7ms)
+2015-04-05T15:39:36.218470+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "category"=>"", "body"=>"this"}
+2015-04-05T15:39:36.227043+00:00 app[web.1]:   Rendered search/search.html.erb within layouts/application (4.4ms)
+2015-04-05T15:39:36.227900+00:00 app[web.1]: Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 2.7ms)
+2015-04-05T15:39:36.226446+00:00 app[web.1]:   Rendered search/_results.html.erb (3.7ms)
+2015-04-05T15:39:36.226962+00:00 app[web.1]:   Rendered search/_search_box.html.erb (0.4ms)
+2015-04-05T15:39:38.778701+00:00 app[web.1]: Started GET "/search?utf8=%E2%9C%93&category=&body=his" for 188.121.15.125 at 2015-04-05 15:39:38 +0000
+2015-04-05T15:39:38.787564+00:00 app[web.1]:   [1m[36mOffer Load (1.4ms)[0m  [1mSELECT  "offers".* FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%his%') LIMIT 10 OFFSET 0[0m
+2015-04-05T15:39:38.789329+00:00 app[web.1]:   Rendered search/search.html.erb within layouts/application (3.8ms)
+2015-04-05T15:39:38.781028+00:00 app[web.1]: Processing by SearchController#search as HTML
+2015-04-05T15:39:38.781050+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "category"=>"", "body"=>"his"}
+2015-04-05T15:39:38.785049+00:00 app[web.1]:   [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%his%')
+2015-04-05T15:39:38.788705+00:00 app[web.1]:   Rendered search/_paging.html.erb (0.4ms)
+2015-04-05T15:39:38.788763+00:00 app[web.1]:   Rendered search/_results.html.erb (3.1ms)
+2015-04-05T15:39:38.789254+00:00 app[web.1]:   Rendered search/_search_box.html.erb (0.3ms)
+2015-04-05T15:39:38.790036+00:00 app[web.1]: Completed 200 OK in 9ms (Views: 3.3ms | ActiveRecord: 2.7ms)
+2015-04-05T15:39:38.796534+00:00 heroku[router]: at=info method=GET path="/search?utf8=%E2%9C%93&category=&body=his" host=dry-journey-2619.herokuapp.com request_id=21b829a6-d95b-4b90-b1b5-9a8843cc75b7 fwd="188.121.15.125" dyno=web.1 connect=2ms service=21ms status=200 bytes=4079
+2015-04-05T15:51:44.936339+00:00 heroku[router]: at=info method=GET path="/search_dynamic" host=dry-journey-2619.herokuapp.com request_id=e086c912-ed32-4b13-b439-512bf25db9b0 fwd="188.121.15.125" dyno=web.1 connect=0ms service=90ms status=200 bytes=2856
+2015-04-05T15:51:44.872290+00:00 app[web.1]: Processing by SearchController#search_dynamic as HTML
+2015-04-05T15:51:44.927426+00:00 app[web.1]:   Rendered search/_search_box.html.erb (23.4ms)
+2015-04-05T15:51:44.928248+00:00 app[web.1]: Completed 200 OK in 56ms (Views: 24.9ms | ActiveRecord: 1.3ms)
+2015-04-05T15:51:44.927511+00:00 app[web.1]:   Rendered search/search_dynamic.html.erb within layouts/application (23.8ms)
+2015-04-05T15:51:44.869022+00:00 app[web.1]: Started GET "/search_dynamic" for 188.121.15.125 at 2015-04-05 15:51:44 +0000
+2015-04-05T15:51:44.892194+00:00 app[web.1]:   [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')
+2015-04-05T15:51:45.228767+00:00 heroku[router]: at=info method=GET path="/logo.png" host=dry-journey-2619.herokuapp.com request_id=4e3b2de4-60f6-4506-a5b1-341b0c522e81 fwd="188.121.15.125" dyno=web.1 connect=1ms service=3ms status=304 bytes=133
+2015-04-05T15:51:45.100951+00:00 heroku[router]: at=info method=GET path="/assets/application-7da46610c96671ebddfebcdc2c8bd555.css" host=dry-journey-2619.herokuapp.com request_id=35931b63-33ac-4957-ba6d-a410bb6cd1c3 fwd="188.121.15.125" dyno=web.1 connect=1ms service=8ms status=304 bytes=204
+2015-04-05T15:51:45.260637+00:00 heroku[router]: at=info method=GET path="/assets/application-95df0fb88c26bb00c82d220fd0a0f117.js" host=dry-journey-2619.herokuapp.com request_id=7e312eb4-747f-4909-8dae-e258759bfa78 fwd="188.121.15.125" dyno=web.1 connect=11ms service=14ms status=304 bytes=218
+2015-04-05T15:51:45.648634+00:00 heroku[router]: at=info method=GET path="/search.json?body=" host=dry-journey-2619.herokuapp.com request_id=89e21678-e02e-4c91-847f-34fac299d5d2 fwd="188.121.15.125" dyno=web.1 connect=16ms service=44ms status=304 bytes=729
+2015-04-05T15:51:45.589833+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=dry-journey-2619.herokuapp.com request_id=7877c806-1fec-4faa-930e-59946474919a fwd="188.121.15.125" dyno=web.1 connect=1ms service=5ms status=304 bytes=133
+2015-04-05T15:51:45.609316+00:00 app[web.1]: Started GET "/search.json?body=" for 188.121.15.125 at 2015-04-05 15:51:45 +0000
+2015-04-05T15:51:45.633226+00:00 app[web.1]:   [1m[35mOffer Load (2.0ms)[0m  SELECT  "offers".* FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%') LIMIT 10 OFFSET 0
+2015-04-05T15:51:45.635740+00:00 app[web.1]: Completed 200 OK in 24ms (Views: 17.8ms | ActiveRecord: 3.7ms)
+2015-04-05T15:51:45.611469+00:00 app[web.1]: Processing by SearchController#search as JSON
+2015-04-05T15:51:45.611508+00:00 app[web.1]:   Parameters: {"body"=>""}
+2015-04-05T15:51:45.615535+00:00 app[web.1]:   [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')[0m
+2015-04-05T15:51:45.635421+00:00 app[web.1]:   Rendered search/search.json.jbuilder (19.3ms)
+2015-04-05T15:51:48.294022+00:00 app[web.1]:   [1m[36m (2.8ms)[0m  [1mSELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')[0m
+2015-04-05T15:51:48.286426+00:00 app[web.1]: Started GET "/search_dynamic" for 188.121.15.125 at 2015-04-05 15:51:48 +0000
+2015-04-05T15:51:48.289227+00:00 app[web.1]: Processing by SearchController#search_dynamic as HTML
+2015-04-05T15:51:48.295262+00:00 app[web.1]:   Rendered search/_search_box.html.erb (0.4ms)
+2015-04-05T15:51:48.295421+00:00 app[web.1]:   Rendered search/search_dynamic.html.erb within layouts/application (0.8ms)
+2015-04-05T15:51:48.296115+00:00 app[web.1]: Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 2.8ms)
+2015-04-05T15:51:48.299727+00:00 heroku[router]: at=info method=GET path="/search_dynamic" host=dry-journey-2619.herokuapp.com request_id=1bca258b-460c-4fd7-9a47-2bc45fb64244 fwd="188.121.15.125" dyno=web.1 connect=8ms service=20ms status=200 bytes=2856
+2015-04-05T15:51:48.462998+00:00 heroku[router]: at=info method=GET path="/assets/application-7da46610c96671ebddfebcdc2c8bd555.css" host=dry-journey-2619.herokuapp.com request_id=3091b177-f07d-4133-9ff4-046781c18694 fwd="188.121.15.125" dyno=web.1 connect=7ms service=8ms status=304 bytes=204
+2015-04-05T15:51:48.451881+00:00 heroku[router]: at=info method=GET path="/logo.png" host=dry-journey-2619.herokuapp.com request_id=6e1eee6e-ce5f-4d19-84d3-ceb00c77b315 fwd="188.121.15.125" dyno=web.1 connect=2ms service=5ms status=304 bytes=133
+2015-04-05T15:51:48.458874+00:00 heroku[router]: at=info method=GET path="/assets/application-95df0fb88c26bb00c82d220fd0a0f117.js" host=dry-journey-2619.herokuapp.com request_id=3240692b-a265-41ce-9236-d08d830ba5d1 fwd="188.121.15.125" dyno=web.1 connect=3ms service=10ms status=304 bytes=218
+2015-04-05T15:51:48.832015+00:00 heroku[router]: at=info method=GET path="/search.json?body=" host=dry-journey-2619.herokuapp.com request_id=8306cc6a-a72a-4a78-ae18-38d9a086a800 fwd="188.121.15.125" dyno=web.1 connect=15ms service=27ms status=304 bytes=729
+2015-04-05T15:51:48.807800+00:00 app[web.1]: Started GET "/search.json?body=" for 188.121.15.125 at 2015-04-05 15:51:48 +0000
+2015-04-05T15:51:48.816350+00:00 app[web.1]:   [1m[36mOffer Load (1.6ms)[0m  [1mSELECT  "offers".* FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%') LIMIT 10 OFFSET 0[0m
+2015-04-05T15:51:48.817921+00:00 app[web.1]: Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 3.0ms)
+2015-04-05T15:51:48.810089+00:00 app[web.1]: Processing by SearchController#search as JSON
+2015-04-05T15:51:48.810096+00:00 app[web.1]:   Parameters: {"body"=>""}
+2015-04-05T15:51:48.813829+00:00 app[web.1]:   [1m[35m (1.4ms)[0m  SELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')
+2015-04-05T15:51:48.817618+00:00 app[web.1]:   Rendered search/search.json.jbuilder (3.3ms)
+2015-04-05T15:51:50.581522+00:00 heroku[router]: at=info method=GET path="/search_dynamic" host=dry-journey-2619.herokuapp.com request_id=39b2b19c-8721-490d-9f94-88dd8348de6e fwd="188.121.15.125" dyno=web.1 connect=16ms service=27ms status=200 bytes=2856
+2015-04-05T15:51:50.559461+00:00 app[web.1]: Started GET "/search_dynamic" for 188.121.15.125 at 2015-04-05 15:51:50 +0000
+2015-04-05T15:51:50.565496+00:00 app[web.1]:   [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')
+2015-04-05T15:51:50.566844+00:00 app[web.1]:   Rendered search/_search_box.html.erb (0.4ms)
+2015-04-05T15:51:50.561855+00:00 app[web.1]: Processing by SearchController#search_dynamic as HTML
+2015-04-05T15:51:50.566932+00:00 app[web.1]:   Rendered search/search_dynamic.html.erb within layouts/application (0.7ms)
+2015-04-05T15:51:50.567561+00:00 app[web.1]: Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 1.5ms)
+2015-04-05T15:51:50.765009+00:00 heroku[router]: at=info method=GET path="/assets/application-7da46610c96671ebddfebcdc2c8bd555.css" host=dry-journey-2619.herokuapp.com request_id=649a0c5d-d363-42fe-8cc8-373528e286c0 fwd="188.121.15.125" dyno=web.1 connect=9ms service=13ms status=304 bytes=204
+2015-04-05T15:51:50.744026+00:00 heroku[router]: at=info method=GET path="/logo.png" host=dry-journey-2619.herokuapp.com request_id=7adb3848-530b-458e-bd5d-b5e37fc1059e fwd="188.121.15.125" dyno=web.1 connect=3ms service=3ms status=304 bytes=133
+2015-04-05T15:51:50.740882+00:00 heroku[router]: at=info method=GET path="/assets/application-95df0fb88c26bb00c82d220fd0a0f117.js" host=dry-journey-2619.herokuapp.com request_id=949e565a-22ba-49a6-8d6f-5bdad4d74e00 fwd="188.121.15.125" dyno=web.1 connect=1ms service=3ms status=304 bytes=218
+2015-04-05T15:51:50.962726+00:00 heroku[router]: at=info method=GET path="/search.json?body=" host=dry-journey-2619.herokuapp.com request_id=8a99af0f-cb80-430c-95b3-ec72b4d7ae07 fwd="188.121.15.125" dyno=web.1 connect=1ms service=18ms status=304 bytes=729
+2015-04-05T15:51:50.951721+00:00 heroku[router]: at=info method=GET path="/logo.png" host=dry-journey-2619.herokuapp.com request_id=897381b1-0849-4bb3-b0d3-72eea1608920 fwd="188.121.15.125" dyno=web.1 connect=8ms service=12ms status=304 bytes=133
+2015-04-05T15:51:50.959159+00:00 app[web.1]:   [1m[35mOffer Load (2.6ms)[0m  SELECT  "offers".* FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%') LIMIT 10 OFFSET 0
+2015-04-05T15:51:50.948194+00:00 app[web.1]: Started GET "/search.json?body=" for 188.121.15.125 at 2015-04-05 15:51:50 +0000
+2015-04-05T15:51:50.960296+00:00 app[web.1]: Completed 200 OK in 9ms (Views: 1.9ms | ActiveRecord: 4.3ms)
+2015-04-05T15:51:50.950945+00:00 app[web.1]: Processing by SearchController#search as JSON
+2015-04-05T15:51:50.960100+00:00 app[web.1]:   Rendered search/search.json.jbuilder (4.0ms)
+2015-04-05T15:51:50.950966+00:00 app[web.1]:   Parameters: {"body"=>""}
+2015-04-05T15:51:50.955466+00:00 app[web.1]:   [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')[0m
+2015-04-05T15:51:58.427600+00:00 heroku[router]: at=info method=GET path="/search_dynamic" host=dry-journey-2619.herokuapp.com request_id=11cb1b31-d4d5-4d1f-bb51-2138c33b6e54 fwd="188.121.15.125" dyno=web.1 connect=0ms service=15ms status=200 bytes=2856
+2015-04-05T15:51:58.416832+00:00 app[web.1]: Processing by SearchController#search_dynamic as HTML
+2015-04-05T15:51:58.421762+00:00 app[web.1]:   Rendered search/_search_box.html.erb (0.3ms)
+2015-04-05T15:51:58.421909+00:00 app[web.1]:   Rendered search/search_dynamic.html.erb within layouts/application (0.7ms)
+2015-04-05T15:51:58.422554+00:00 app[web.1]: Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 1.9ms)
+2015-04-05T15:51:58.414876+00:00 app[web.1]: Started GET "/search_dynamic" for 188.121.15.125 at 2015-04-05 15:51:58 +0000
+2015-04-05T15:51:58.420512+00:00 app[web.1]:   [1m[36m (1.9ms)[0m  [1mSELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')[0m
+2015-04-05T15:51:58.587239+00:00 heroku[router]: at=info method=GET path="/logo.png" host=dry-journey-2619.herokuapp.com request_id=b8b9bea7-a720-48ae-bb9e-a23816901209 fwd="188.121.15.125" dyno=web.1 connect=1ms service=5ms status=304 bytes=133
+2015-04-05T15:51:58.578501+00:00 heroku[router]: at=info method=GET path="/assets/application-7da46610c96671ebddfebcdc2c8bd555.css" host=dry-journey-2619.herokuapp.com request_id=44b8ebfc-0e44-454d-bc74-a67752a83030 fwd="188.121.15.125" dyno=web.1 connect=0ms service=4ms status=304 bytes=204
+2015-04-05T15:51:58.630129+00:00 heroku[router]: at=info method=GET path="/assets/application-95df0fb88c26bb00c82d220fd0a0f117.js" host=dry-journey-2619.herokuapp.com request_id=262ef773-cd1b-4767-9fcb-29061d3635c6 fwd="188.121.15.125" dyno=web.1 connect=17ms service=20ms status=304 bytes=218
+2015-04-05T15:51:58.918893+00:00 heroku[router]: at=info method=GET path="/logo.png" host=dry-journey-2619.herokuapp.com request_id=7e4b5a23-267d-4c9e-b596-65826ac31655 fwd="188.121.15.125" dyno=web.1 connect=13ms service=16ms status=304 bytes=133
+2015-04-05T15:51:5
+8.917295+00:00 app[web.1]:   Parameters: {"body"=>""}
+2015-04-05T15:51:58.926104+00:00 app[web.1]: Completed 200 OK in 9ms (Views: 2.1ms | ActiveRecord: 3.0ms)
+2015-04-05T15:51:58.924628+00:00 app[web.1]:   [1m[36mOffer Load (1.3ms)[0m  [1mSELECT  "offers".* FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%') LIMIT 10 OFFSET 0[0m
+2015-04-05T15:51:58.914558+00:00 app[web.1]: Started GET "/search.json?body=" for 188.121.15.125 at 2015-04-05 15:51:58 +0000
+2015-04-05T15:51:58.922158+00:00 app[web.1]:   [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "offers" INNER JOIN "categories" ON "categories"."id" = "offers"."category_id" WHERE (categories.name like '%%') AND (offers.body like '%%')
+2015-04-05T15:51:58.925758+00:00 app[web.1]:   Rendered search/search.json.jbuilder (2.9ms)
+2015-04-05T15:51:58.916787+00:00 app[web.1]: Processing by SearchController#search as JSON
+2015-04-05T15:51:58.930359+00:00 heroku[router]: at=info method=GET path="/search.json?body=" host=dry-journey-2619.herokuapp.com request_id=03b7fbb9-c429-495c-a48f-793e4f118b57 fwd="188.121.15.125" dyno=web.1 connect=1ms service=20ms status=304 bytes=729
