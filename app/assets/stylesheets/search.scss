@@ -111,19 +111,33 @@
 	display: table;
 	margin: 20px auto;
 
-	a, span {
+	.element {
 		display: table-cell;
-		padding: 6px 12px;
 		border: 1px solid #DDD;
 		color: #3778B6;
 		text-decoration: none;
-
-		transition-property: all;
-		transition-duration: 0.25s;
-		transition-timing-function: ease-in-out;
 	}
 
-	a:hover {
-		background-color: #eee;
+	.link, .spacer {
+		padding: 6px 12px;
+	}
+
+	.link {
+		&.noncurrent {
+			cursor: pointer;
+
+			transition-property: all;
+			transition-duration: 0.25s;
+			transition-timing-function: ease-in-out;
+
+			&:hover {
+				background-color: #eee;
+			}
+		}
+
+		&.current {
+			color: white;
+			background-color: #428bca;
+		}
 	}
 }
