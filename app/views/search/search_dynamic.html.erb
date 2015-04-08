@@ -1,7 +1,7 @@
-<div class="search-page">
-	<div ng-app="app" ng-controller="AlaController">
-		<%= text_field_tag :body, nil, class: 'form-field', :'ng-model' => 'searchText', :'ng-trim' => 'false' %>
-		<div>Text in scope: {{searchText}}</div>
+<div class="search-page dynamic">
+	<div ng-app="app" ng-controller="SearchDynamicController">
+		<h3 class="info">Enter query below for instant full-text search in offers:</h3>
+		<%= text_field_tag :body, nil, class: 'field query', :'ng-model' => 'searchText', :'ng-trim' => 'false' %>
 		<div class="results">
 			<h1>Dynamic Job Search Results</h1>
 			<p>Below are your search results for jobs that include the keywords: "{{searchText}}".</p>
@@ -16,6 +16,5 @@
 		</div>
 	</div>
 
-	<%= render 'search_box' %>
 	<div class="clear">
 </div>

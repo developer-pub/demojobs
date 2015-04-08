@@ -8,15 +8,15 @@
 </head>
 <body>
 	<div class="navigation-bar">
-		<a href='#'>Find a Job</a>
-		<a href='#'>Lose a Job</a>
+		<%= link_to 'Categories list', root_path %>
+		<%= link_to 'Dynamic AngularJS version', search_dynamic_path %>
+		<%= link_to 'Static version', search_path %>
 
 		<div class="clear"></div>
 	</div>
 	<div class="main-content">
 		<img src="/logo.png" alt="We use angularJS... do you?"/>
 		<%= yield %>
-	<div contenteditable>This is editable</div>
 	</div>
 </div>
 </body>

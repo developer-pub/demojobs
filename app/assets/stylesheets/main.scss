@@ -1,3 +1,78 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	background-color: rgba(0,0,0,0.03);
+	margin: 0px;
+	overflow-y: scroll;
+
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 18px;
+
+	h1, h2, h3 {
+		color: #3778B6;
+	}
+
+	h1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	h2 {
+		font-size: 21px;
+		line-height: 25px;
+	}
+
+	h3 {
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	p {
+		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: #2A6496;
+}
+
+.clear {
+	clear: both;
+}
+
+.main-content {
+	box-sizing: border-box;
+	width: 87%;
+	margin: auto;
+	padding: 65px 20px;
+
+	background-color: #fff;
+	font-size: 14px;
+}
+
+.navigation-bar
+{
+	width: 100%;
+	position: fixed;
+
+	background-image: linear-gradient(
+			rgb(98, 172, 243) 0%, 
+			rgb(94, 162, 227) 50%, 
+			rgb(67, 146, 221) 51%, 
+			rgb(61, 134, 203) 100%
+		);
+
+	margin: 0px;
+	padding: 0px 50px;
+
+	a {
+		float: left;
+		padding: 15px;
+		color: #fff;
+		font-weight: 700;
+		text-decoration: none;
+
+		&:hover{
+			background-color: rgba(255,255,255,0.2);
+		}
+	}
+}

@@ -1,4 +1,10 @@
 module ApplicationHelper
+	PER_PAGE = 10
+
+	def search_path_with_query(category_id)
+		search_path(1, {category_id: category_id, per_page: PER_PAGE})
+	end
+
 	def pick_attributes(objects, *attributes)
 		objects.map &extract_attributes_func(*attributes)
 	end

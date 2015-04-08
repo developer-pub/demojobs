@@ -1,6 +1,6 @@
 ap = angular.module('app', [])
 
-ap.controller('AlaController', ['$scope', '$http', function($scope, $http){
+ap.controller('SearchDynamicController', ['$scope', '$http', function($scope, $http){
 	$scope.searchText = '';
 
 	$scope.$watch('searchText', function(newValue, oldValue){
