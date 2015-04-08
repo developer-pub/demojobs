@@ -105,6 +105,15 @@
 		font-size: 12px;
 		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	}
+
+	/* IE10 Hack: when button is styled display:none submitting via enter doesn't work */
+	.submit-button {
+		height: 0px;
+		width: 0px;
+		padding: 0px;
+		margin: 0px;
+		border: none;
+	}
 }
 
 .paging {
