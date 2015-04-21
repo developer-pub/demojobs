@@ -5,5 +5,5 @@ json.pageCount @page_count
 json.offersCount @offers_count
 
 json.offers do
-	json.array! pick_attributes @offers_limited, :title, :body
+  json.array! pick_attributes @offers_limited, :title, :body
 end
