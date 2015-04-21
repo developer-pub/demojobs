@@ -1,28 +1,17 @@
-== README
+== Outline
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a very simple remake of popular website for job seekers.
 
-Things you may want to cover:
+IT'S JUST A DEMO, IT'S NOT MEANT TO BE USED FOR COMMERCIAL PURPOSES
 
-* Ruby version
+The application is a Capybara-Mechanize scraped version of original website. The scraping engine is provided seperately in Scrape project.
 
-* System dependencies
+The website uses similar styling as the original website and contains the following:
 
-* Configuration
+* Main Page/Categories list
 
-* Database creation
+* Dynamic AngularJS version, that filters out queries instantly with AJAX calls
 
-* Database initialization
+* Simple static version
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Pagination for both the Angular and static version implemented seperately in JS and Ruby.
